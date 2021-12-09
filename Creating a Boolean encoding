@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Print the "manufacturer_name" frequency table.
+print(used_cars["manufacturer_name"].value_counts())
+
+# Create a Boolean column for the most common manufacturer name
+used_cars["is_volkswagen"] = np.where(
+  used_cars["manufacturer_name"].str.contains("Volkswagen", regex=False), 1, 0
+)
+  
+# Check the final frequency table
+print(used_cars["is_volkswagen"].value_counts())
