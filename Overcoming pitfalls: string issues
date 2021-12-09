@@ -1,3 +1,5 @@
+import pandas as pd
+
 # Print the frequency table of body_type and include NaN values
 print(used_cars["body_type"].value_counts(dropna=False))
 
